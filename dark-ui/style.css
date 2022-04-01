@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+li {
+    list-style: none;
+}
+
+html,body {
+    height: 100%;
+}
+
+body {
+    /* background-color: black; */
+    background: linear-gradient(40deg, black, #000000e0);
+    padding: 1em;
+    color: white;
+    font-family: sans-serif;
+}
+
+.container {
+    /* background-color: #FFFFFF22; */
+    height: 100%;
+    box-sizing: content-box;
+    /* overflow: hidden; */
+
+    display: grid;
+    grid-template-areas: 'g a a' 'b c d' 'e e f';
+    grid-auto-rows: 80px 3fr 2fr;
+    grid-template-columns: 6em 5fr 2fr;
+    gap: 0.75em;
+}
+
+.container > *:not(.logo, .header) {
+    /* background-color: #FFFFFF22; */
+    border-radius: 1em;     
+    background: linear-gradient(225deg, black, rgba(255, 255, 255, 0.133)), 
+    linear-gradient(1deg, black, rgba(255, 255, 255, 0.133));
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header ul.menu {
+    display: flex;
+}
+
+.header ul.menu li {
+    padding: 0 0.3em;
+    font-size: smaller;
+}
+
+/* .header ul li a {
+
+} */
+
+.other-menu {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.user-online {
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+}
+
+.mini-user-pic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.mini-user-pic img {
+    background-color: #FFFFFF22;
+    height: 2em;
+    width: 2em;
+    border-radius: 50%;
+}
+.mini-user-pic.active div {
+    height: 2px;
+    width: 80%;
+    margin-top: 0.1em;
+    background-color: white;
+    border-radius: 2px;
+}
+
+.button-container {
+    display: flex;
+    gap: 0.7em;
+}
+
+.button-container button {
+    background-color: rgb(22, 22, 22);
+    border: solid 1px #cecece;
+    border-radius: 1em;
+    padding: 0.5em 1.2em;
+    color: white;
+    font-size: smaller;
+    transition: 150ms;
+}
+
+.button-container button:hover, .button-container button:active, .button-container button:focus {
+    filter: brightness(1.2);
+}
